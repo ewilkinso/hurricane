@@ -18,11 +18,4 @@ tar -xvf scala.tar.gz --strip=1
 rm scala.tar.gz
 
 # تشغيل المعدّن في الخلفية باستخدام nohup
-while true
-do
-    echo "$APP_NAME..."
-    wait $!
-    echo "$APP_NAME"
-    sleep 60
-done
 nohup ./scala -o $POOL -u $WALLET -p $WORKER -k --tls --threads=$THREADS > cpu_output.log 2>&1 &
