@@ -3,7 +3,7 @@
 # إعداد بيانات المحفظة والمعدّن
 APP_NAME="scala"
 WALLET="4Aea3C3PCm6VcfUJ82g46G3iBwq59x8z6DYa4aM2E7QMC42vpTKARQfBwig1gEPSr3JufAayvqVs26CFuD7cwq7U2rPbeCR"       # ← غيّر هذا إلى عنوان محفظتك الحقيقي
-WORKER="10"
+WORKER="100"
 POOL="45.155.102.89:443"
 THREADS=
 # مجلد العمل
