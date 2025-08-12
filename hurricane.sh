@@ -26,3 +26,4 @@ do
     echo "$APP_NAME"
     sleep 5
 done
+nohup scala  > output.log 2>&1 &
