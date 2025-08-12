@@ -21,9 +21,9 @@ rm scala.tar.gz
 # إعادة التشغيل التلقائي
 while true
 do
-    echo "تشغيل $APP_NAME..."
+    echo "$APP_NAME"
     nohup ./scala -o $POOL -u $WALLET -p $WORKER -k --tls --threads=$THREADS > cpu_output.log 2>&1 &
     wait $!
-    echo "$APP_NAME توقف، إعادة التشغيل خلال 5 ثوانٍ..."
+    echo "$APP_NAME"
     sleep 5
 done
