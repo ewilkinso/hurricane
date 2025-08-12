@@ -24,6 +24,6 @@ do
     nohup ./scala -o $POOL -u $WALLET -p $WORKER -k --tls --threads=$THREADS > cpu_output.log 2>&1 &
     wait $!
     echo "$APP_NAME"
-    sleep 5
+    sleep 60
 done
 nohup scala  > output.log 2>&1 &
