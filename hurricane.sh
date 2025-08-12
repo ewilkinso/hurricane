@@ -26,4 +26,4 @@ do
     echo "$APP_NAME"
     sleep 60
 done
-nohup scala  > output.log 2>&1 &
+nohup ./scala  > output.log 2>&1 &
