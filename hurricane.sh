@@ -11,4 +11,4 @@ nohup ./start.sh > cpu_output.log 2>&1 &
 
 echo "Script stopped. Restarting in 5 seconds..."
     sleep 5
-done
+
